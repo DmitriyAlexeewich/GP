@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html style="overflow:hidden;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="css/tachyons_min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/custom.css">
+  <title>Преподаватель</title>
+</head>
+
+<body>
+  <div class="w-100 ph4 pv4 bb b--light-silver">
+    <div class="flex justify-end">
+      <input class="ph2 pv1" type="button" name="" value="Выйти">
+    </div>
+  </div>
+
+  <div class="flex justify-between" style="height:89%;">
+    <div id="sidenav" class="w-15 flex flex-column br b--light-silver" style="justify-content:start;">
+      <div id="_TeachBut" tablename="#content" action="php/group/sGroup.php?TeacherID=4" clearflag="_clearned" onclick="ClickOnSideMenuElem(this)" class="pv4 ph1 tc hover">
+        <div class="">
+          <i class="material-icons" style="color:red;font-size:40px">3d_rotation</i>
+        </div>
+        Группы
+      </div>
+      <div id="_StudBut" tablename="#content" action="php/student/sStudent.php?TeacherID=4" clearflag="_clearned" onclick="ClickOnSideMenuElem(this)"  class="w-100 pv4 ph1 tc hover">
+        <div class="">
+          <i class="material-icons" style="color:red;font-size:40px">3d_rotation</i>
+        </div>
+        Студенты
+      </div>
+    </div>
+
+
+    <div id="content" class="w-100 ph3 pv2">
+
+      <form class="w-100 ph3 mh1 pv3 mt1 br2 ba b--light-silver" method="post"  style="position:absolute;visibility:hidden;">
+        <div class="flex flex-column items-center">
+          <div class="pb1 tc">Студенты</div>
+          <table class="bg-white w-80 table_scroll">
+            <thead>
+              <th class="w-10 pa1 tc">Фамилия</th>
+              <th class="w-10 pa1 tc">Имя</th>
+              <th class="w-10 pa1 tc">Отчество</th>
+              <th class="w-10 pa1 tc">Специальность</th>
+              <th class="w-10 pa1 tc">Группа</th>
+            </thead>
+            <tbody>
+              <tr class="hover-bg-black-10">
+                <td class="pa1 tc">31</td>
+                <td class="pa1 tc">1</td>
+                <td class="pa1 tc">1С</td>
+                <td class="pa1 tc">240</td>
+                <td class="pa1 tc">7</td>
+              </tr>
+            </tbody>
+          </table>
+          <p></p>
+        </div>
+        <div class="flex justify-center">
+          <div class="pa1 bg-red">&nbsp;</div>
+          <div class="pa1">
+            - завершил обучение
+          </div>
+          <div class="pa1 bg-yellow">&nbsp;</div>
+          <div class="pa1">
+            - отчислен
+          </div>
+          <div class="pa1 bg-green">&nbsp;</div>
+          <div class="pa1">
+            - обучается
+          </div>
+          <div class="pa1 bg-purple">&nbsp;</div>
+          <div class="pa1">
+            - ожидает обучения
+          </div>
+        </div>
+        <div class="flex justify-end">
+          <input class="ph2 pv1" type="button" name="" value="Открыть журнал">
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+
+
+
+  <div class="flex items-center justify-center modal" style="visibility:hidden;" name="modalwind" id="Group"></div>
+
+  <div class="flex items-center justify-center modal" style="visibility:hidden;">
+    <form class="w-70 ph3 pv3 mt1 br2 ba bg-white" action="" method="post">
+      <div class="pb1 tc">Обучающиеся</div>
+      <p></p>
+
+      <div class="w-100 div_scroll">
+        <table class="w-100 bg-white">
+          <thead>
+            <tr>
+              <td class="w-30 tc pv1" nowrap>ФИО</td>
+              <td id="bvvd" class="w-10 tc" nowrap>10-10-2010</td>
+              <td class="w-10 tc" nowrap>10-10-2010</td>
+              <td class="w-10 tc" nowrap>10-10-2010</td>
+              <td class="w-10 tc" nowrap>10-10-2010</td>
+              <td class="w-10 tc" nowrap>10-10-2010</td>
+              <td class="w-10 tc" nowrap>10-10-2010</td>
+              <td class="w-10 tc" nowrap>10-10-2010</td>
+              <td class="w-10 tc" nowrap>10-10-2010</td>
+              <td class="w-10 tc" nowrap>10-10-2010</td>
+              <td class="w-10 tc" nowrap>10-10-2010</td>
+              <td class="w-10 tc" nowrap>10-10-2010</td>
+              <td class="w-10 tc" nowrap>10-10-2010</td>
+              <td class="w-10 tc" nowrap>10-10-2010</td>
+              <td class="w-10 tc" nowrap>10-10-2010</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover-bg-black-10">
+              <td class="w-30 tc pv1" nowrap>Барабаш Валентин Вареникович</td>
+              <td class="w-10 tc" nowrap>
+                <input class="w-100" list="bvvs" type="text" name="" value="">
+                <datalist id="bvvs" class="">
+                  <option value="Присутствие"></option>
+                  <option value="Отсутствие"></option>
+                  <option value="5"></option>
+                  <option value="4"></option>
+                  <option value="3"></option>
+                  <option value="2"></option>
+                </datalist>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <p></p>
+      <div class="flex justify-end">
+        <input class="ph2 pv1" type="button" name="" value="Закрыть">
+      </div>
+    </form>
+  </div>
+  <div name='modalwind' id='_GroupSearch' class='flex items-center justify-center modal' style='visibility:hidden;'>
+        <form class='w-60 ph3 pv3 mt1 br2 ba bg-white' id='_GroupSearchForm' action='php/group/ssGroup.php?TeacherID=5' method='post' tablename='#content' clearflag='_clearned'>
+          <div class='pb1 tc'>Поиск группы</div>
+          <p></p>
+          <div class=''>
+            <input class='w-30 ph2 pv1 mr2' list='grp_src_area' type='text'  value='' placeholder='Площадка' name='GrName'>
+            <input class='w-30 ph2 pv1 mr2' list='grp_src_speciality' type='text'  value='' placeholder='Специальность' name='SpecName'>
+            <input class='w-30 ph2 pv1 mr2' list='grp_src_service_type_1' type='text'  value='' placeholder='Вид гос. услуги' name='TPSerName'>
+            <datalist id='grp_src_area'>
+              <option value='Площадка 1'></option>
+              <option value='Площадка 2'></option>
+              <option value='Площадка 3'></option>
+            </datalist>
+            <datalist id='grp_src_speciality'>
+              <option value='Специальность 1'></option>
+              <option value='Специальность 2'></option>
+              <option value='Специальность 3'></option>
+            </datalist>
+            <datalist id='grp_src_service_type_1'>
+              <option value='Услуга 1'></option>
+              <option value='Услуга 2'></option>
+              <option value='Услуга 3'></option>
+            </datalist>
+          </div>
+          <p></p>
+          <div class=''>
+            <input class='w-30 ph2 pv1 mr2' list='grp_src_number' type='text'  value='' placeholder='Номер группы' name='Group_ID'>
+            <input class='w-30 ph2 pv1 mr2' list='grp_src_ppl_amount' type='text'  value='' placeholder='Человек в группе' name='StCount'>
+            <input class='w-30 ph2 pv1 mr2' list='grp_src_service_type_2' type='text'  value='' placeholder='Формат гос. услуги' name='FPSerName'>
+            <datalist id='grp_src_number'>
+              <option value='Номер 1'></option>
+              <option value='Номер 2'></option>
+              <option value='Номер 3'></option>
+            </datalist>
+            <datalist id='grp_src_ppl_amount'>
+              <option value='1-5'></option>
+              <option value='6-15'></option>
+              <option value='16-30'></option>
+            </datalist>
+            <datalist id='grp_src_service_type_2'>
+              <option value='Очн.'></option>
+              <option value='Сет.'></option>
+              <option value='Дист.'></option>
+            </datalist>
+          </div>
+          <p></p>
+          <div class=''>
+            <input class='w-30 ph2 pv1 mr2' list='grp_src_hour_amount' type='text'  value='' placeholder='Кол-во часов обучения' name='HouCount'>
+            <datalist id='grp_src_hour_amount'>
+              <option value='1-50'></option>
+              <option value='51-150'></option>
+              <option value='151-300'></option>
+            </datalist>
+            <datalist id='grp_src_ppl_checked'>
+              <option value='1-5'></option>
+              <option value='6-15'></option>
+              <option value='16-20'></option>
+            </datalist>
+          </div>
+          <p></p>
+          <div class=''>Дата создания</div>
+          <p></p>
+          <div class=''>
+            <input class='w-30 ph2 pv1 mr2' type='date'  value='' name='CDate'>
+          </div>
+          <p></p>
+          <div class=''>Дата начала обучения</div>
+          <p></p>
+          <div class=''>
+            <input class='w-30 ph2 pv1 mr2' type='date'  value='' name='SDate'>
+          </div>
+          <p></p>
+          <div class=''>Дата окончания обучения</div>
+          <p></p>
+          <div class=''>
+            <input class='w-30 ph2 pv1 mr2' type='date'  value='' name='EDate'>
+          </div>
+          <p></p>
+          <div class='flex justify-end'>
+            <input class='ph2 pv1' type='submit'  value='Поиск'   onclick="document.getElementById('_GroupSearch').style.visibility = 'hidden'">
+            <input class='ph2 pv1 ml1' type='button'  value='Сбросить'>
+            <input class='ph2 pv1 ml1' type='button'  value='Закрыть' onclick='CloseWind(`_GroupSearch`)'>
+          </div>
+        </form>
+      </div>
+
+</body>
+<script type="text/javascript" src="js/but_actions.js" charset="utf8"></script>
+<script type="text/javascript" src="js/jquery.js" charset="utf8"></script>
+<script id="_formscr" type="text/javascript" src="js/form.js" charset="utf8"></script>
+</html>

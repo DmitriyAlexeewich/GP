@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=cyrillic-ext');
+
+@media only screen and (min-width: 800px) and (max-width: 1280px){
+	table,tr,td,th{
+		font-size:0.8rem;
+	}
+}
+
+
+* {
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+}
+
+html {
+  height: 100%;
+  background: linear-gradient(180deg, #fafafa, #cdf0ff);
+  background-repeat: no-repeat;
+}
+
+body {
+  height: 90%;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+input {
+  outline: none;
+}
+
+input[type="button"] {
+  cursor: pointer;
+}
+
+input[type="date"] {
+  color: grey;
+}
+
+#sidenav {
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#sidenav>div {
+  border-bottom: 1px rgb(192, 192, 192) solid;
+  background: linear-gradient(180deg, #fafafa, #cdf0ff);
+}
+
+#sidenav>div:hover {
+  background: linear-gradient(180deg, #fafafa, #8bd7f7);
+}
+
+.table_scroll {
+  height: 300px;
+  overflow-y: scroll;
+  display: block;
+}
+
+.div_scroll {
+  overflow-x: auto;
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input[readonly] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+div[noselect] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+table, th, tr, td {
+  word-break: break-word;
+  border: 1px black solid;
+  border-collapse: collapse;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  background: rgba(80, 80, 80, 0.3);
+  height: 100%;
+  width: 100%;
+}
+
+ul#navmenu-v {
+  margin-top: 10px !important;
+}
+
+ul#navmenu-v,
+ul#navmenu-v li,
+ul#navmenu-v ul {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  width: 160px;
+  list-style: none;
+}
+
+ul#navmenu-v:after {
+  clear: both;
+  display: block;
+  font: 1px/0px serif;
+  content: ".";
+  height: 0;
+  visibility: hidden;
+}
+
+ul#navmenu-v li {
+  float: left;
+  display: block !important;
+  display: inline;
+  position: relative;
+  border: grey 1px solid;
+}
+
+ul#navmenu-v li ul li {
+  border: none;
+  border-bottom: #FFFFFF 2px solid;
+}
+
+/* Root Menu */
+ul#navmenu-v a {
+  padding: 6px;
+  display: block;
+  background: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 2nd Menu */
+ul#navmenu-v li:hover li a,
+ul#navmenu-v li.iehover li a {
+  background: white;
+  border: grey 1px solid;
+}
+
+ul#navmenu-v li:hover li a:hover,
+ul#navmenu-v li:hover li:hover a,
+ul#navmenu-v li.iehover li a:hover,
+ul#navmenu-v li.iehover li.iehover a {}
+
+a:active, a:visited {
+  color: black;
+}
+
+ul#navmenu-v ul,
+ul#navmenu-v ul ul,
+ul#navmenu-v ul ul ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 160px;
+}
+
+ul#navmenu-v li:hover ul ul,
+ul#navmenu-v li:hover ul ul ul,
+ul#navmenu-v li.iehover ul ul,
+ul#navmenu-v li.iehover ul ul ul {
+  display: none;
+}
+
+ul#navmenu-v li:hover ul,
+ul#navmenu-v ul li:hover ul,
+ul#navmenu-v ul ul li:hover ul,
+ul#navmenu-v li.iehover ul,
+ul#navmenu-v ul li.iehover ul,
+ul#navmenu-v ul ul li.iehover ul {
+  display: block;
+}
+.erroplaceholder::-webkit-input-placeholder {
+    color: #ff725c;
+ }
+#NotifMess {
+  -webkit-animation: blink1 3s linear infinite;
+  animation: blink1 3s linear infinite;
+}
+@-webkit-keyframes blink1 {
+  0% { color: rgba(34, 34, 34, 1); }
+  50% { color: rgba(34, 34, 34, 0); }
+  100% { color: rgba(34, 34, 34, 1); }
+}
+@keyframes blink1 {
+  0% { color: rgba(34, 34, 34, 1); }
+  50% { color: rgba(34, 34, 34, 0); }
+  100% { color: rgba(34, 34, 34, 1); }
+}

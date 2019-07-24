@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html style="overflow:hidden;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="css/tachyons_min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/custom.css">
+  <title>Авторизация</title>
+</head>
+
+<body>
+
+  <div class="flex flex-column justify-center h-50 mv6">
+    <div class="flex items-center justify-center" style="">
+      <form class="w-20 ph3 pv3 mt1 br2 ba bg-white" action="pass.php" method="post">
+        <div class="pb1 tc">Авторизация</div>
+        <p></p>
+        <div class="flex flex-column items-center">
+          <div class='w-100 flex justify-between ba b--light-silver mb2'>
+            <input class='w-100 ph2 pv1 tc bw0' type='text' name='Login' value='' placeholder='Логин'>
+            <div class='w-10 pv1 tc' noselect onclick='ClearField(this)'>x</div>
+          </div>
+          <div class='w-100 flex justify-between ba b--light-silver'>
+            <input class='w-100 ph2 pv1 tc bw0' type='password' name='Pass' value='' placeholder='Пароль'>
+            <div class='w-10 pv1 tc' noselect onclick='ClearField(this)'>x</div>
+          </div>
+        </div>
+        <p></p>
+        <div class="flex justify-center">
+          <input class="ph2 pv1" type="submit" name="" value="Войти">
+          <input class="ph2 pv1 ml1" type="button" name="" value="Отмена" onclick="ClearLogin()">
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</body>
+<script type="text/javascript" src="js/but_actions.js" charset="utf8"></script>
+<script id="_formscr" type="text/javascript" src="js/form.js" charset="utf8"></script>
+</html>
